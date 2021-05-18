@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Style inputs */
+    input[type=text],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+      color: black;
+      text-align: center;
+      font-size: 0.8em;
+    }
+
+    input[type=submit] {
+      background-color: #04AA6D;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    /* Style the container/contact section */
+    .container {
+      border-radius: 5px;
+      background-image: url('contact.jpg');
+      padding: 10px;
+      background-size: cover;
+      height: 60rem;
+
+    }
+
+    /* Create two columns that float next to eachother */
+    .column {
+      width: 100%;
+      padding: 0px 15px;
+      background-color: #21363f73;
+      border: 3px solid rgb(0 0 0);
+      color: white;
+      width: 40%;
+    margin: auto;
+    text-align: center;
+}
+    
+
+    /* Clear floats after the columns */
+    .row {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .s-line {
+      display: flex;
+    }
+    .s-in{
+      margin-right: 8px;
+    }
+    select{
+      color: grey;
+    }
+    .title{ margin: auto;
+        margin-right: 14em;
+        padding: 10px;
+
+    }
+   .title h1{border: 1px solid gold; padding: 10px;
+
+
+    }
+
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+     
+      .column,
+      input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+        border: none;
+      }
+      .container {
+       width: 100%;
+        background-repeat: no-repeat;
+        background-size: 25.5em;
+      }
+
+      .title h1{
+        font-size: 1.5em;
+        border: none;
+        text-align: left;
+       
+
+      }
+      
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="container">
+
+
+    <div class="row">
+      
+        <span  class="title" >
+        <marquee behavior="slide" direction="up" scrollamount="40">
+
+          <h1 > COWORKING SPACE REQUIREMENTS IN PUNE</h1></marquee>
+        </span>
+         <p> Looking for Shared Office Space in Pune, Feel free to drop us a line.</p>
+        
+      
+      <div class="column">
+        <div>
+          <h2>Looking For Coworking Space ?</h2>
+          <p>Let us know your Requirements:</p>
+        </div>
+        <form action="sndmail.php" method="POST">
+
+          <input type="text" id="name" name="name" placeholder="Your name..">
+          <input type="text" id="compname" name="compname" placeholder="Company Name">
+
+          <span class="s-line">
+            <input class="s-in" type="text" id="mobile" name="mobile" placeholder=" Mobile No..">
+            <input type="text" id="email" name="email" placeholder="Email Address..">
+          </span>
+          <select name="subject" id="subject">
+            <option value="subject" selected>Subject</option>
+            <option value="workdesk">Workdesk</option>
+            <option value="private-cabin">Private Cabin</option>
+            <option value="conference">Conference Room</option>
+            <option value="other">Other Sevices</option>
+          </select>
+          <span class="s-line">
+            <select class="s-in" name="preffered-branch" id="branch">
+              <option value="preffered-branch" selected>Select Preffered Branch</option>
+              <option value="Baner">Baner</option>
+              <option value="Balewadi">Balewadi</option>
+              <option value="DP-road">DP Raod</option>
+              <option value="karvenagar">Karvenagar</option>
+              <option value="other">Other Sevices</option>
+            </select>
+
+            <select name="team-size" id="team-size">
+              <option value="team-size" selected>Let us know your team size.</option>
+              <option value="0-5">0-5</option>
+              <option value="5-10">5-10</option>
+              <option value="11-40">11-40</option>
+              <option value="40+">40+</option>
+            </select>
+          </span>
+
+          <textarea  id="subject" name="msg" placeholder="Write something.." style="height:150px"></textarea>
+          <div style="text-align: center; margin: 2px;">
+          <input type="submit" value="Submit" name="submit">
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+</body>
+
+</html>
